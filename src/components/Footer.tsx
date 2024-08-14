@@ -2,10 +2,11 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-gray-800 text-white p-4">
-            <div className="container mx-auto text-center">
-                <p>Contact us: contact@myapp.com</p>
-                <p>All rights reserved © 2024 MyApp</p>
+        <footer className="footer-container h-20 bg-secondaryColor text-primaryColor p-4">
+            <div className="container  mx-auto text-center">
+                <p className="pb-2">Contact us: contact@kolade.saturdaynight.com</p>
+
+                <p className="pb-2">All rights reserved © 2024. Saturday Night</p>
             </div>
         </footer>
     );

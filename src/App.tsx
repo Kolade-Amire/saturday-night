@@ -9,7 +9,7 @@ export default function App() {
 
   return (
       <>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex overflow-auto flex-col min-h-screen">
               <Header/>
               <Body/>
               <Footer/>
