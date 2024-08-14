@@ -9,7 +9,7 @@ export default {
         extend: {
             colors: {
                 primaryColor: '#F1E3D0',
-                secondaryColor: '#585656',
+                secondaryColor: 'rgba(45,43,43,0.84)',
                 textColorPrimary: '#585656',
                 textFaded: '#989494'
             },
