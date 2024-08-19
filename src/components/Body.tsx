@@ -15,7 +15,7 @@ const Body = () => {
                 </h1>
             </div>
             <div className="max-w-md mx-auto bg-primaryColor border-2 border-textFaded p-6 mt-10 rounded-md shadow-md">
-                <h2 className="text-2xl text-textColorPrimary font-bold mb-4">Login / Sign Up</h2>
+                <h2 className="text-2xl text-textColorPrimary font-bold mb-4">Sign Up</h2>
                 <form className="bg-primaryColor">
                     <input type="text" placeholder="Full name"
                            className="w-full bg-primaryColor border-2 border-textFaded p-2 mb-4 rounded"/>
@@ -26,11 +26,11 @@ const Body = () => {
                     <input type="text" placeholder="Confirm password"
                            className="w-full bg-primaryColor border-2 border-textFaded p-2 mb-4 rounded"/>
                     <button type="submit"
-                            className="w-full bg-secondaryColor text-primaryColor p-2 rounded hover:bg-blue-600">
+                            className="w-full bg-secondaryColor text-primaryColor p-2 rounded hover:bg-textFaded">
                         Sign Up
                     </button>
-                    <p className="mt-4 text-secondaryColor">Have an account?
-                        <a href="#" className="text-secondaryColor font-bold hover:text-textFaded ">
+                    <p className="mt-4 font-semibold text-secondaryColor">Have an account?
+                        <a href="#" className="text-secondaryColor ml-1 font-bold hover:text-textFaded ">
                             Login
                         </a>
                     </p>
