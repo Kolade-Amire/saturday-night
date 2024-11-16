@@ -6,10 +6,6 @@
     to { width: 100%; }
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: black; }
-}
 
 .typing-container {
     display: inline-block; /* Ensure it only takes up as much space as needed */
@@ -20,14 +16,10 @@
     display: inline-block;
     overflow: hidden;
     text-wrap: wrap;
-    border-right: 2px solid black;
     animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
     font-family: 'Courier New', Courier, monospace;
     width: 100%;
 }
-
-
-
 
 .faded-edges {
     position: relative;
@@ -50,4 +42,78 @@
     display: block;
     width: 100%;
     height: auto;
+}
+
+.toggler {
+    display: flex;
+    align-items: center;
+}
+
+.toggler p {
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.toggler--slider {
+    width: 25px;
+    height: 13px;
+    background-color: #2B283A;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+    border-color: white;
+    background-color: #F5F5F5;
+}
+
+.toggler--slider--circle {
+    height: 13px;
+    width: 13px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+    background-color: black;
+}
+
+.toggler--light {
+    color: #2B283A;
+}
+
+nav.dark .toggler--light {
+    color: #918E9B;
+}
+
+.toggler--dark {
+    color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+    color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+    justify-content: flex-end;
+}
+
+main {
+    padding: 57px 27px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    flex: 1 1 auto;
+    background-color: var(--primary-color);
+    color: #2B283A;
+}
+
+main.dark {
+    background-color: var(--secondary-color);
+    color: white;
 }

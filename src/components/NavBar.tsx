@@ -1,43 +1,49 @@
-import logoSrc from '../assets/logo.svg';
-import {useState, useEffect} from 'react';
+import logoSrc from '../assets/logo.svg'
+import {useState, useEffect} from 'react'
 
-const Header = () => {
+export default function NavBar(props) {
     const [isOpen, setIsOpen] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
-    };
+    }
 
     useEffect(() => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    }, [])
 
     useEffect(() => {
         if (windowWidth >= 640) {
-            setIsOpen(false);
+            setIsOpen(false)
         }
-    }, [windowWidth]);
+    }, [windowWidth])
 
-    const toggleMenu = () => setIsOpen(!isOpen);
+    const toggleMenu = () => setIsOpen(!isOpen)
 
     return (
-        <header
-            className={`header-container ${isOpen ? 'h-40' : 'h-20'} bg-primaryColor text-textColorPrimary font-bold flex border-b border-b-textFaded items-center justify-between transition-height duration-300`}>
+        <nav
+            className={`header-container ${isOpen ? 'h-40' : 'h-20'} ${props.darkMode ? "dark" : ""} bg-primaryColor text-textColorPrimary font-bold flex border-b border-b-textFaded items-center justify-between transition-height duration-300`}>
             <div className="mx-auto flex justify-between p-4 items-center w-full">
-                <div className="flex-shrink-0">
-                    <img src={logoSrc} className="h-10 w-auto" alt="logo"/>
-                </div>
-                <nav className="flex-grow left-nav-group hidden md:flex space-x-14 pl-16">
+                <img src={logoSrc} className="h-10 w-auto flex-shrink-0" alt="logo"/>
+
+                <div className="flex-grow left-nav-group hidden md:flex space-x-5 pl-6">
                     <a href="#" className="hover:text-textFaded">Home</a>
                     <a href="#" className="hover:text-textFaded">Stories</a>
                     <a href="#" className="hover:text-textFaded">Music</a>
-                </nav>
-                <nav className="right-nav-group hidden md:flex space-x-4">
+                </div>
+                <div className="right-nav-group hidden md:flex space-x-4">
                     <a href="#" className="hover:text-textFaded">Login</a>
-                    <a href="#" className="hover:text-textFaded">Sign Up</a>
-                </nav>
+                    <div className="toggler md:flex mt-1 space-x-1">
+                        <p className="toggler--light">Light</p>
+                        <div className="toggler--slider" onClick={props.toggleDarkMode}>
+                            <div className="toggler--slider--circle"></div>
+                        </div>
+                        <p className="toggler--dark">Dark</p>
+                    </div>
+
+                </div>
                 <div className="menu-icon md:hidden">
                     <button onClick={toggleMenu} className="focus:outline-none">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,8 +63,6 @@ const Header = () => {
                     </nav>
                 </div>
             )}
-        </header>
-    );
-};
-
-export default Header;
+        </nav>
+    )
+}
