@@ -2,7 +2,7 @@ import './App.css'
 
 import NavBar from "./components/NavBar.tsx";
 import Footer from "./components/Footer.tsx";
-import Main from "./components/Main.tsx";
+import Body from "./components/Body.tsx";
 
 export default function App() {
 
@@ -11,7 +11,7 @@ export default function App() {
       <>
           <div className="flex overflow-auto flex-col min-h-screen">
               <NavBar darMode={false}/>
-              <Main darkMode={false}/>
+              <Body darkMode={false}/>
               <Footer/>
           </div>
       </>

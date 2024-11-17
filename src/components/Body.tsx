@@ -1,8 +1,8 @@
-import homeImgSrc from '../assets/sat-night4.jpg';
+import homeImgSrc from '../assets/city-scape.jpg';
 import googleLogo from '../assets/google_logo.svg'
 import '../App.css'
 
-export default function Main(props) {
+export default function Body(props) {
     return (
         <main className={`${props.darkMode ? "dark" : ""} container mx-auto flex-grow text-center p-4`}>
 
