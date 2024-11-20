@@ -44,6 +44,13 @@
     height: auto;
 }
 
+nav.dark {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    --tw-border-opacity: 1;
+    border-bottom-color: var(--text-faded);
+}
+
 .toggler {
     display: flex;
     align-items: center;
@@ -57,20 +64,20 @@
 .toggler--slider {
     width: 25px;
     height: 13px;
-    background-color: #2B283A;
+    background-color: var(--secondary-color);
     border-radius: 2rem;
     margin-inline: 7px;
     cursor: pointer;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid gray;
     box-sizing: content-box;
 }
 
 nav.dark .toggler--slider {
     border-color: white;
-    background-color: #F5F5F5;
+    background-color: var(--primary-color);
 }
 
 .toggler--slider--circle {
@@ -81,23 +88,23 @@ nav.dark .toggler--slider {
 }
 
 nav.dark .toggler--slider--circle {
-    background-color: black;
+    background-color: var(--secondary-color);
 }
 
 .toggler--light {
-    color: #2B283A;
+    color: var(--text-color-primary);
 }
 
 nav.dark .toggler--light {
-    color: #918E9B;
+    color: var(--text-faded);
 }
 
 .toggler--dark {
-    color: #D5D4D8;
+    color: var(--text-faded);
 }
 
 nav.dark .toggler-dark {
-    color: #FFFFFF;
+    color: var(--secondary-color);
 }
 
 nav.dark .toggler--slider {
@@ -110,10 +117,17 @@ main {
     background-position: right center;
     flex: 1 1 auto;
     background-color: var(--primary-color);
-    color: #2B283A;
+    color: var(--secondary-color);
+    border: none;
 }
 
 main.dark {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--primary-color);
+}
+
+
+footer.dark {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }

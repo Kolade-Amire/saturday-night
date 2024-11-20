@@ -4,7 +4,7 @@ import '../App.css'
 
 export default function Body(props) {
     return (
-        <main className={`${props.darkMode ? "dark" : ""} container mx-auto flex-grow text-center p-4`}>
+        <main className={`${props.darkMode ? "dark" : ""} bg-primaryColor flex-grow mx-0 px-0 text-center p-4`}>
 
             <div className="typing-container">
             <h1 className="typing-animation text-1xl md:text-2xl font-mono font-semibold text-textColorPrimary my-6">
