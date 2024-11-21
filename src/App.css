@@ -138,6 +138,6 @@ main.dark .form--label{
 
 
 footer.dark {
-    background-color: var(--primary-color);
+    background-color: var(--text-faded);
     color: var(--secondary-color);
 }

@@ -59,10 +59,18 @@ export default function NavBar(props) {
             {isOpen && (
                 <div className="md:hidden">
                     <nav className="flex flex-col items-center space-y-4 p-4">
-                        <a href="#" className="hover:text-gray-400">Home</a>
-                        <a href="#" className="hover:text-gray-400">Stories</a>
-                        <a href="#" className="hover:text-gray-400">Music</a>
-                        <a href="#" className="hover:text-gray-400">Contact</a>
+                        <div className="toggler md:flex mt-1 space-x-1">
+                            <p className="toggler--light">Light</p>
+                            <div className="toggler--slider" onClick={props.toggleDarkMode}>
+                                <div className="toggler--slider--circle"></div>
+                            </div>
+                            <p className="toggler--dark">Dark</p>
+                        </div>
+                        <a href="#" className="flex flex-colhover:text-gray-400">Home</a>
+                        <a href="#" className="flex flex-colhover:text-gray-400">Stories</a>
+                        <a href="#" className="flex flex-colhover:text-gray-400">Music</a>
+                        <a href="#" className="flex flex-colhover:text-gray-400">Contact</a>
+
                     </nav>
                 </div>
             )}
