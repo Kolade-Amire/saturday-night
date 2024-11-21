@@ -2,8 +2,10 @@ import logoSrc from '../assets/logo.svg'
 import {useState, useEffect} from 'react'
 
 export default function NavBar(props) {
+
     const [isOpen, setIsOpen] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
 
     const handleResize = () => {
         setWindowWidth(window.innerWidth);

@@ -7,16 +7,18 @@ import {useState} from "react";
 
 export default function App() {
 
-    const [darkMode, setDarkMode] = useState(false);
-
+    const [darkMode, setDarkMode] = useState<boolean>(false);
     function toggleDarkMode() {
-        setDarkMode(!darkMode);
+        setDarkMode(prevDarkMode => !prevDarkMode)
     }
 
   return (
       <>
           <div className="flex flex-col min-h-screen">
-              <NavBar darkMode={darkMode}/>
+              <NavBar
+                  darkMode={darkMode}
+                  toggleDarkMode={toggleDarkMode}
+              />
               <Body darkMode={darkMode}/>
               <Footer darkMode={darkMode}/>
           </div>

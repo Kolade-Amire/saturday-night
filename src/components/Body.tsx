@@ -19,32 +19,32 @@ export default function Body(props) {
                 <img src={homeImgSrc} alt="home image" className="max-w-screen max-h-96 w-auto"/>
             </div>
             <div className="max-w-md mx-auto border-2 border-textFaded p-6 mt-10 rounded-md shadow-md">
-                <h2 className="text-2xl text-textColorPrimary font-bold mb-4">Sign up</h2>
-                <form className="bg-primaryColor">
-                    <label className="text-textColorPrimary font-bold text-left block mb-1" htmlFor="first-name">First
+                <h2 className="form--label text-2xl text-textColorPrimary font-bold mb-4">Sign up</h2>
+                <form className="bg-primaryColor signup--form">
+                    <label className="form--label text-textColorPrimary font-bold text-left block mb-1" htmlFor="first-name">First
                         Name</label>
                     <input id="first-name" type="text"
                            className="w-full bg-primaryColor text-textColorPrimary border-2 border-textFaded p-2 mb-4 rounded"/>
-                    <label className="text-textColorPrimary font-bold text-left block mb-1" htmlFor="last-name">Last
+                    <label className="form--label text-textColorPrimary font-bold text-left block mb-1" htmlFor="last-name">Last
                         Name</label>
                     <input id="last-name" type="text"
                            className="w-full bg-primaryColor text-textColorPrimary border-2 border-textFaded p-2 mb-4 rounded"/>
-                    <label className="text-textColorPrimary font-bold text-left block mb-1" htmlFor="email">Email
+                    <label className="form--label text-textColorPrimary font-bold text-left block mb-1" htmlFor="email">Email
                         Address</label>
                     <input type="text" id="email"
                            className="w-full bg-primaryColor text-textColorPrimary border-2 border-textFaded p-2 mb-4 rounded"/>
-                    <label className="text-textColorPrimary font-bold text-left block mb-1"
+                    <label className="form--label text-textColorPrimary font-bold text-left block mb-1"
                            htmlFor="password">Password</label>
                     <input type="text" id="password"
-                           className="w-full bg-primaryColor text-textColorPrimary border-2 border-textFaded p-2 mb-4 rounded"/>
-                    <label className="text-textColorPrimary font-bold text-left block mb-1" htmlFor="confirm-password">Confirm Password</label>
+                           className="form--label w-full bg-primaryColor text-textColorPrimary border-2 border-textFaded p-2 mb-4 rounded"/>
+                    <label className="form--label text-textColorPrimary font-bold text-left block mb-1" htmlFor="confirm-password">Confirm Password</label>
                     <input type="text" id="confirm-password"
                            className="w-full bg-primaryColor text-textColorPrimary border-2 border-textFaded p-2 mb-4 rounded"/>
                     <button type="submit"
                             className="w-full bg-secondaryColor text-primaryColor p-2 rounded hover:bg-textFaded">
                         Sign up
                     </button>
-                    <p className="mt-4 text-gray-600">Have an account with us already? <a href="#"
+                    <p className="form--label mt-4 text-gray-600">Have an account with us already? <a href="#"
                                                                           className="text-secondaryColor font-bold hover:underline hover:text-textFaded ">Login</a>
                     </p>
                     <p className="mt-4 text-gray-600">or</p>

@@ -93,6 +93,7 @@ nav.dark .toggler--slider--circle {
 
 .toggler--light {
     color: var(--text-color-primary);
+    font-weight: bolder;
 }
 
 nav.dark .toggler--light {
@@ -103,8 +104,8 @@ nav.dark .toggler--light {
     color: var(--text-faded);
 }
 
-nav.dark .toggler-dark {
-    color: var(--secondary-color);
+nav.dark .toggler--dark {
+    color: var(--primary-color);
 }
 
 nav.dark .toggler--slider {
@@ -123,6 +124,15 @@ main {
 
 main.dark {
     background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+main.dark .signup--form {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+main.dark .form--label{
     color: var(--primary-color);
 }
 
