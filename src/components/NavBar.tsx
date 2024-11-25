@@ -27,7 +27,7 @@ export default function NavBar(props) {
 
     return (
         <nav
-            className={`header-container ${isOpen ? 'h-40' : 'h-20'} ${props.darkMode ? "dark" : ""} bg-primaryColor text-textColorPrimary font-bold flex border-b border-b-textFaded items-center justify-between transition-height duration-300`}>
+            className={`header-container ${isOpen ? 'h-40' : 'h-20'} ${props.config.darkMode ? "dark" : ""} bg-primaryColor text-textColorPrimary font-bold flex border-b border-b-textFaded items-center justify-between transition-height duration-300`}>
             <div className="mx-auto flex justify-between p-4 items-center w-full">
                 <img src={logoSrc} className="h-10 w-auto flex-shrink-0" alt="logo"/>
 
@@ -40,7 +40,7 @@ export default function NavBar(props) {
                     <a href="#" className="hover:text-textFaded">Login</a>
                     <div className="toggler md:flex mt-1 space-x-1">
                         <p className="toggler--light">Light</p>
-                        <div className="toggler--slider" onClick={props.toggleDarkMode}>
+                        <div className="toggler--slider" onClick={props.config.toggleDarkMode}>
                             <div className="toggler--slider--circle"></div>
                         </div>
                         <p className="toggler--dark">Dark</p>
