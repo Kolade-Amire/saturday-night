@@ -23,8 +23,8 @@ export default function App() {
                 <NavBar
                     config ={config}
                 />
-                <Body darkMode={darkMode}/>
-                <Footer darkMode={darkMode}/>
+                <Body darkMode={config.darkMode}/>
+                <Footer darkMode={config.darkMode}/>
             </div>
         </>
     )
